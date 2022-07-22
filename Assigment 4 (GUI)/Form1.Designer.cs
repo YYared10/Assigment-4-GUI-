@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.bttn_Add = new System.Windows.Forms.Button();
             this.bttn_Cancel = new System.Windows.Forms.Button();
             this.lbl_Count = new System.Windows.Forms.Label();
@@ -43,11 +44,15 @@
             this.txtPRICE = new System.Windows.Forms.TextBox();
             this.txtOBJNM = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Allprod = new System.Windows.Forms.DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.Allprod)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // bttn_Add
             // 
-            this.bttn_Add.Location = new System.Drawing.Point(388, 335);
+            this.bttn_Add.Location = new System.Drawing.Point(845, 288);
             this.bttn_Add.Name = "bttn_Add";
             this.bttn_Add.Size = new System.Drawing.Size(136, 39);
             this.bttn_Add.TabIndex = 0;
@@ -57,7 +62,7 @@
             // 
             // bttn_Cancel
             // 
-            this.bttn_Cancel.Location = new System.Drawing.Point(729, 335);
+            this.bttn_Cancel.Location = new System.Drawing.Point(1023, 288);
             this.bttn_Cancel.Name = "bttn_Cancel";
             this.bttn_Cancel.Size = new System.Drawing.Size(126, 39);
             this.bttn_Cancel.TabIndex = 1;
@@ -68,7 +73,7 @@
             // lbl_Count
             // 
             this.lbl_Count.AutoSize = true;
-            this.lbl_Count.Location = new System.Drawing.Point(385, 243);
+            this.lbl_Count.Location = new System.Drawing.Point(446, 150);
             this.lbl_Count.Name = "lbl_Count";
             this.lbl_Count.Size = new System.Drawing.Size(41, 16);
             this.lbl_Count.TabIndex = 2;
@@ -77,6 +82,8 @@
             // lbl_name
             // 
             this.lbl_name.AutoSize = true;
+            this.lbl_name.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.lbl_name.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbl_name.Location = new System.Drawing.Point(71, 50);
             this.lbl_name.Name = "lbl_name";
             this.lbl_name.Size = new System.Drawing.Size(55, 16);
@@ -104,7 +111,7 @@
             // lbl_Price
             // 
             this.lbl_Price.AutoSize = true;
-            this.lbl_Price.Location = new System.Drawing.Point(726, 243);
+            this.lbl_Price.Location = new System.Drawing.Point(814, 150);
             this.lbl_Price.Name = "lbl_Price";
             this.lbl_Price.Size = new System.Drawing.Size(41, 16);
             this.lbl_Price.TabIndex = 6;
@@ -145,7 +152,7 @@
             // 
             // txtCOUNT
             // 
-            this.txtCOUNT.Location = new System.Drawing.Point(390, 273);
+            this.txtCOUNT.Location = new System.Drawing.Point(437, 196);
             this.txtCOUNT.Name = "txtCOUNT";
             this.txtCOUNT.Size = new System.Drawing.Size(278, 22);
             this.txtCOUNT.TabIndex = 11;
@@ -153,7 +160,7 @@
             // 
             // txtPRICE
             // 
-            this.txtPRICE.Location = new System.Drawing.Point(729, 273);
+            this.txtPRICE.Location = new System.Drawing.Point(801, 196);
             this.txtPRICE.Name = "txtPRICE";
             this.txtPRICE.Size = new System.Drawing.Size(320, 22);
             this.txtPRICE.TabIndex = 12;
@@ -175,11 +182,30 @@
             this.dateTimePicker1.TabIndex = 14;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
+            // Allprod
+            // 
+            this.Allprod.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Allprod.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Allprod.GridColor = System.Drawing.SystemColors.Control;
+            this.Allprod.Location = new System.Drawing.Point(74, 257);
+            this.Allprod.Name = "Allprod";
+            this.Allprod.RowHeadersWidth = 51;
+            this.Allprod.RowTemplate.Height = 24;
+            this.Allprod.Size = new System.Drawing.Size(742, 199);
+            this.Allprod.TabIndex = 15;
+            this.Allprod.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Allprod_CellContentClick);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1058, 483);
+            this.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.ClientSize = new System.Drawing.Size(1343, 530);
+            this.Controls.Add(this.Allprod);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txtOBJNM);
             this.Controls.Add(this.txtPRICE);
@@ -197,6 +223,8 @@
             this.Controls.Add(this.bttn_Add);
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.Allprod)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,6 +247,8 @@
         private System.Windows.Forms.TextBox txtPRICE;
         private System.Windows.Forms.TextBox txtOBJNM;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridView Allprod;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 

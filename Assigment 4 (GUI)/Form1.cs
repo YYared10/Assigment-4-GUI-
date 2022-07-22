@@ -25,16 +25,99 @@ namespace Assigment_4__GUI_
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Regex A = new Regex(@"^[a-z]||[A-Z] {10}$");
+            Regex B = new Regex(@"[0-9]{5}$");
+           
+
+
+
             Model it = new Model
             {
                 Number = txtNUM.Text,
                 Inventorynum = txtINVENTORYNUM.Text,
-                Objectname = txtCOUNT.Text,
+                Objectname = txtOBJNM.Text,
                 Count = txtCOUNT.Text,
                 Price = txtPRICE.Text,
-                Date = dateTimePicker1.Value
+                Date = dateTimePicker1.Value,
+     
             };
-            it.save();
+            if (string.IsNullOrEmpty(txtNUM.Text))
+            {
+
+                errorProvider1.SetError(txtNUM, "INVALID number- !  ");
+            }
+            else if (B.IsMatch(txtNUM.Text))
+            {
+                errorProvider1.SetError(txtNUM, "INVALID number- !  ");
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+
+            if (string.IsNullOrEmpty(txtCOUNT.Text))
+            {
+
+                errorProvider1.SetError(txtCOUNT, "INVALID Count !  ");
+            }
+            else if (B.IsMatch(txtCOUNT.Text))
+            {
+                errorProvider1.SetError(txtCOUNT, "INVALID Count !  ");
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+
+            if (string.IsNullOrEmpty(txtOBJNM.Text))
+            {
+
+                errorProvider1.SetError(txtOBJNM, "INVALID ObjectName  !  ");
+            }
+            else if (A.IsMatch(txtOBJNM.Text))
+            {
+                errorProvider1.SetError(txtOBJNM, "INVALID ObjectName !  ");
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+
+            if (string.IsNullOrEmpty(txtINVENTORYNUM.Text))
+            {
+
+                errorProvider1.SetError(txtINVENTORYNUM, "INVALID InvetoryNUM  !  ");
+            }
+            else if (B.IsMatch(txtINVENTORYNUM.Text))
+            {
+                errorProvider1.SetError(txtINVENTORYNUM, "INVALID InvetoryNUM !  ");
+            }
+            else
+            {
+                errorProvider1.Clear();
+            }
+
+            try
+            {
+                if (string.IsNullOrEmpty(txtPRICE.Text))
+                {
+
+                    errorProvider1.SetError(txtPRICE, "INVALID Price  ! ");
+                }
+                else
+                {
+                    errorProvider1.Clear();
+                    it.save();
+                    MessageBox.Show("Sucessfully Added");
+                    Allprod.DataSource = null;
+                    Allprod.DataSource = Model.GetAllProducts();   
+                }
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Invalid Price  ! ");
+            }
+
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -73,6 +156,11 @@ namespace Assigment_4__GUI_
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Allprod_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

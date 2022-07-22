@@ -15,7 +15,6 @@ namespace Assigment_4__GUI_
         public string Objectname { get; set; }
         public string Count { get; set; }
         public string Price { get; set; }
-
         public void save()
         {
             modelList.Add(this);
@@ -25,5 +24,12 @@ namespace Assigment_4__GUI_
         {
             return modelList;
         }
+
+
+
     }
+    
+    
+
+
 }
