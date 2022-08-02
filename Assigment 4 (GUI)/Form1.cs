@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace Assigment_4__GUI_
 {
@@ -16,18 +9,17 @@ namespace Assigment_4__GUI_
         public Form1()
         {
             InitializeComponent();
+            CurrentUser.Text += Name;
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
             Regex A = new Regex(@"^[a-z]||[A-Z] {10}$");
             Regex B = new Regex(@"[0-9]{5}$");
-           
+            bool allFieldsAreCorrect = true;
+
 
 
 
@@ -39,8 +31,10 @@ namespace Assigment_4__GUI_
                 Count = txtCOUNT.Text,
                 Price = txtPRICE.Text,
                 Date = dateTimePicker1.Value,
-     
+                isAvailable = cbIsAvailable.Checked,
+
             };
+
             if (string.IsNullOrEmpty(txtNUM.Text))
             {
 
@@ -110,15 +104,40 @@ namespace Assigment_4__GUI_
                     it.save();
                     MessageBox.Show("Sucessfully Added");
                     Allprod.DataSource = null;
-                    Allprod.DataSource = Model.GetAllProducts();   
+                    Allprod.DataSource = Model.GetAllProducts();
                 }
             }
-            catch(Exception)
+            catch (Exception)
             {
                 MessageBox.Show("Invalid Price  ! ");
             }
 
+            it.isAvailable = cbIsAvailable.Checked;
+
+            if (rbSimple.Checked == false && rbvariable.Checked == false)
+            {
+                allFieldsAreCorrect = false;
+                errorProvider1.SetError(gbProductType, "One of the radio buttons should be selected.");
+
+            }
+
+            it.ProductType = (rbvariable.Checked == true) ? "Variable" : "Simple";
+
+            if (allFieldsAreCorrect == true)
+            {
+                it.save();
+                Allprod.DataSource = null;
+                Allprod.DataSource = Model.GetAllProducts();
+            }
+
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
 
         private void label5_Click(object sender, EventArgs e)
         {
@@ -161,6 +180,26 @@ namespace Assigment_4__GUI_
         }
 
         private void Allprod_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbvariable_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbIsAvailable_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clbCatagory_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

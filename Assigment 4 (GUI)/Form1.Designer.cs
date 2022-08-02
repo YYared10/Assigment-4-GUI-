@@ -46,13 +46,23 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.Allprod = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CurrentUser = new System.Windows.Forms.Label();
+            this.cbIsAvailable = new System.Windows.Forms.CheckBox();
+            this.rbvariable = new System.Windows.Forms.RadioButton();
+            this.rbSimple = new System.Windows.Forms.RadioButton();
+            this.gbProductType = new System.Windows.Forms.GroupBox();
+            this.gbAvilability = new System.Windows.Forms.GroupBox();
+            this.clbCatagory = new System.Windows.Forms.CheckedListBox();
+            this.lblProductCatagory = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Allprod)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.gbProductType.SuspendLayout();
+            this.gbAvilability.SuspendLayout();
             this.SuspendLayout();
             // 
             // bttn_Add
             // 
-            this.bttn_Add.Location = new System.Drawing.Point(845, 288);
+            this.bttn_Add.Location = new System.Drawing.Point(838, 417);
             this.bttn_Add.Name = "bttn_Add";
             this.bttn_Add.Size = new System.Drawing.Size(136, 39);
             this.bttn_Add.TabIndex = 0;
@@ -62,7 +72,7 @@
             // 
             // bttn_Cancel
             // 
-            this.bttn_Cancel.Location = new System.Drawing.Point(1023, 288);
+            this.bttn_Cancel.Location = new System.Drawing.Point(1006, 417);
             this.bttn_Cancel.Name = "bttn_Cancel";
             this.bttn_Cancel.Size = new System.Drawing.Size(126, 39);
             this.bttn_Cancel.TabIndex = 1;
@@ -73,7 +83,7 @@
             // lbl_Count
             // 
             this.lbl_Count.AutoSize = true;
-            this.lbl_Count.Location = new System.Drawing.Point(446, 150);
+            this.lbl_Count.Location = new System.Drawing.Point(434, 150);
             this.lbl_Count.Name = "lbl_Count";
             this.lbl_Count.Size = new System.Drawing.Size(41, 16);
             this.lbl_Count.TabIndex = 2;
@@ -84,7 +94,7 @@
             this.lbl_name.AutoSize = true;
             this.lbl_name.BackColor = System.Drawing.SystemColors.HotTrack;
             this.lbl_name.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_name.Location = new System.Drawing.Point(71, 50);
+            this.lbl_name.Location = new System.Drawing.Point(71, 63);
             this.lbl_name.Name = "lbl_name";
             this.lbl_name.Size = new System.Drawing.Size(55, 16);
             this.lbl_name.TabIndex = 3;
@@ -93,7 +103,7 @@
             // lbl_Date
             // 
             this.lbl_Date.AutoSize = true;
-            this.lbl_Date.Location = new System.Drawing.Point(387, 50);
+            this.lbl_Date.Location = new System.Drawing.Point(434, 63);
             this.lbl_Date.Name = "lbl_Date";
             this.lbl_Date.Size = new System.Drawing.Size(39, 16);
             this.lbl_Date.TabIndex = 4;
@@ -102,7 +112,7 @@
             // lbl_Inventory_number
             // 
             this.lbl_Inventory_number.AutoSize = true;
-            this.lbl_Inventory_number.Location = new System.Drawing.Point(726, 50);
+            this.lbl_Inventory_number.Location = new System.Drawing.Point(814, 63);
             this.lbl_Inventory_number.Name = "lbl_Inventory_number";
             this.lbl_Inventory_number.Size = new System.Drawing.Size(112, 16);
             this.lbl_Inventory_number.TabIndex = 5;
@@ -129,14 +139,14 @@
             // 
             // txtDATE
             // 
-            this.txtDATE.Location = new System.Drawing.Point(390, 86);
+            this.txtDATE.Location = new System.Drawing.Point(437, 98);
             this.txtDATE.Name = "txtDATE";
             this.txtDATE.Size = new System.Drawing.Size(278, 22);
             this.txtDATE.TabIndex = 8;
             // 
             // txtINVENTORYNUM
             // 
-            this.txtINVENTORYNUM.Location = new System.Drawing.Point(729, 86);
+            this.txtINVENTORYNUM.Location = new System.Drawing.Point(817, 100);
             this.txtINVENTORYNUM.Name = "txtINVENTORYNUM";
             this.txtINVENTORYNUM.Size = new System.Drawing.Size(320, 22);
             this.txtINVENTORYNUM.TabIndex = 9;
@@ -144,7 +154,7 @@
             // 
             // txtNUM
             // 
-            this.txtNUM.Location = new System.Drawing.Point(74, 86);
+            this.txtNUM.Location = new System.Drawing.Point(74, 98);
             this.txtNUM.Name = "txtNUM";
             this.txtNUM.Size = new System.Drawing.Size(244, 22);
             this.txtNUM.TabIndex = 10;
@@ -160,7 +170,7 @@
             // 
             // txtPRICE
             // 
-            this.txtPRICE.Location = new System.Drawing.Point(801, 196);
+            this.txtPRICE.Location = new System.Drawing.Point(817, 196);
             this.txtPRICE.Name = "txtPRICE";
             this.txtPRICE.Size = new System.Drawing.Size(320, 22);
             this.txtPRICE.TabIndex = 12;
@@ -176,7 +186,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(390, 86);
+            this.dateTimePicker1.Location = new System.Drawing.Point(437, 98);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(278, 22);
             this.dateTimePicker1.TabIndex = 14;
@@ -199,12 +209,103 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // CurrentUser
+            // 
+            this.CurrentUser.AutoSize = true;
+            this.CurrentUser.Location = new System.Drawing.Point(74, 13);
+            this.CurrentUser.Name = "CurrentUser";
+            this.CurrentUser.Size = new System.Drawing.Size(78, 16);
+            this.CurrentUser.TabIndex = 16;
+            this.CurrentUser.Text = "CurrentUser";
+            // 
+            // cbIsAvailable
+            // 
+            this.cbIsAvailable.AutoSize = true;
+            this.cbIsAvailable.Location = new System.Drawing.Point(15, 38);
+            this.cbIsAvailable.Name = "cbIsAvailable";
+            this.cbIsAvailable.Size = new System.Drawing.Size(99, 20);
+            this.cbIsAvailable.TabIndex = 18;
+            this.cbIsAvailable.Text = "Is Available";
+            this.cbIsAvailable.UseVisualStyleBackColor = true;
+            this.cbIsAvailable.CheckedChanged += new System.EventHandler(this.cbIsAvailable_CheckedChanged);
+            // 
+            // rbvariable
+            // 
+            this.rbvariable.AutoSize = true;
+            this.rbvariable.Location = new System.Drawing.Point(6, 38);
+            this.rbvariable.Name = "rbvariable";
+            this.rbvariable.Size = new System.Drawing.Size(79, 20);
+            this.rbvariable.TabIndex = 19;
+            this.rbvariable.TabStop = true;
+            this.rbvariable.Text = "Variable";
+            this.rbvariable.UseVisualStyleBackColor = true;
+            this.rbvariable.CheckedChanged += new System.EventHandler(this.rbvariable_CheckedChanged);
+            // 
+            // rbSimple
+            // 
+            this.rbSimple.AutoSize = true;
+            this.rbSimple.Location = new System.Drawing.Point(123, 38);
+            this.rbSimple.Name = "rbSimple";
+            this.rbSimple.Size = new System.Drawing.Size(70, 20);
+            this.rbSimple.TabIndex = 20;
+            this.rbSimple.TabStop = true;
+            this.rbSimple.Text = "Simple";
+            this.rbSimple.UseVisualStyleBackColor = true;
+            this.rbSimple.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // gbProductType
+            // 
+            this.gbProductType.Controls.Add(this.rbSimple);
+            this.gbProductType.Controls.Add(this.rbvariable);
+            this.gbProductType.Location = new System.Drawing.Point(848, 257);
+            this.gbProductType.Name = "gbProductType";
+            this.gbProductType.Size = new System.Drawing.Size(200, 100);
+            this.gbProductType.TabIndex = 21;
+            this.gbProductType.TabStop = false;
+            this.gbProductType.Text = "ProductType";
+            // 
+            // gbAvilability
+            // 
+            this.gbAvilability.Controls.Add(this.cbIsAvailable);
+            this.gbAvilability.Location = new System.Drawing.Point(1103, 257);
+            this.gbAvilability.Name = "gbAvilability";
+            this.gbAvilability.Size = new System.Drawing.Size(200, 100);
+            this.gbAvilability.TabIndex = 22;
+            this.gbAvilability.TabStop = false;
+            this.gbAvilability.Text = "Avilability";
+            // 
+            // clbCatagory
+            // 
+            this.clbCatagory.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.clbCatagory.FormattingEnabled = true;
+            this.clbCatagory.Items.AddRange(new object[] {
+            "Food"});
+            this.clbCatagory.Location = new System.Drawing.Point(1176, 180);
+            this.clbCatagory.Name = "clbCatagory";
+            this.clbCatagory.Size = new System.Drawing.Size(138, 38);
+            this.clbCatagory.TabIndex = 23;
+            this.clbCatagory.SelectedIndexChanged += new System.EventHandler(this.clbCatagory_SelectedIndexChanged);
+            // 
+            // lblProductCatagory
+            // 
+            this.lblProductCatagory.AutoSize = true;
+            this.lblProductCatagory.Location = new System.Drawing.Point(1175, 149);
+            this.lblProductCatagory.Name = "lblProductCatagory";
+            this.lblProductCatagory.Size = new System.Drawing.Size(111, 16);
+            this.lblProductCatagory.TabIndex = 24;
+            this.lblProductCatagory.Text = "Product Catagory";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(1343, 530);
+            this.Controls.Add(this.lblProductCatagory);
+            this.Controls.Add(this.clbCatagory);
+            this.Controls.Add(this.gbAvilability);
+            this.Controls.Add(this.gbProductType);
+            this.Controls.Add(this.CurrentUser);
             this.Controls.Add(this.Allprod);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txtOBJNM);
@@ -225,6 +326,10 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Allprod)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.gbProductType.ResumeLayout(false);
+            this.gbProductType.PerformLayout();
+            this.gbAvilability.ResumeLayout(false);
+            this.gbAvilability.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,6 +354,14 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridView Allprod;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label CurrentUser;
+        private System.Windows.Forms.CheckBox cbIsAvailable;
+        private System.Windows.Forms.RadioButton rbSimple;
+        private System.Windows.Forms.RadioButton rbvariable;
+        private System.Windows.Forms.GroupBox gbAvilability;
+        private System.Windows.Forms.GroupBox gbProductType;
+        private System.Windows.Forms.Label lblProductCatagory;
+        private System.Windows.Forms.CheckedListBox clbCatagory;
     }
 }
 
