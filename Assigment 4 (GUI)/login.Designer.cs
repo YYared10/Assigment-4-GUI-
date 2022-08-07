@@ -38,12 +38,14 @@
             // 
             // bttn_Add
             // 
+            this.bttn_Add.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bttn_Add.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bttn_Add.Location = new System.Drawing.Point(249, 246);
             this.bttn_Add.Name = "bttn_Add";
             this.bttn_Add.Size = new System.Drawing.Size(133, 23);
             this.bttn_Add.TabIndex = 0;
             this.bttn_Add.Text = "Add";
-            this.bttn_Add.UseVisualStyleBackColor = true;
+            this.bttn_Add.UseVisualStyleBackColor = false;
             this.bttn_Add.Click += new System.EventHandler(this.bttn_Add_Click);
             // 
             // textBox1Email
@@ -80,18 +82,21 @@
             // 
             // bttn_cancel
             // 
+            this.bttn_cancel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bttn_cancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bttn_cancel.Location = new System.Drawing.Point(432, 246);
             this.bttn_cancel.Name = "bttn_cancel";
             this.bttn_cancel.Size = new System.Drawing.Size(144, 23);
             this.bttn_cancel.TabIndex = 5;
             this.bttn_cancel.Text = "Cancel";
-            this.bttn_cancel.UseVisualStyleBackColor = true;
+            this.bttn_cancel.UseVisualStyleBackColor = false;
             this.bttn_cancel.Click += new System.EventHandler(this.bttn_cancel_Click);
             // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.bttn_cancel);
             this.Controls.Add(this.lbl_pass);
@@ -99,6 +104,7 @@
             this.Controls.Add(this.textBoxpass);
             this.Controls.Add(this.textBox1Email);
             this.Controls.Add(this.bttn_Add);
+            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Name = "login";
             this.Text = "login";
             this.Load += new System.EventHandler(this.login_Load);

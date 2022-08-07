@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace Assigment_4__GUI_
 {
-    public partial class Form1 : Form
+    public partial class Products : Form
     {
-        public Form1()
+        public Products()
         {
             InitializeComponent();
             CurrentUser.Text += Name;
@@ -103,8 +103,8 @@ namespace Assigment_4__GUI_
                     errorProvider1.Clear();
                     it.save();
                     MessageBox.Show("Sucessfully Added");
-                    Allprod.DataSource = null;
-                    Allprod.DataSource = Model.GetAllProducts();
+                    AllprodDGV.DataSource = null;
+                    AllprodDGV.DataSource = Model.GetAllProducts();
                 }
             }
             catch (Exception)
@@ -126,8 +126,8 @@ namespace Assigment_4__GUI_
             if (allFieldsAreCorrect == true)
             {
                 it.save();
-                Allprod.DataSource = null;
-                Allprod.DataSource = Model.GetAllProducts();
+                AllprodDGV.DataSource = null;
+                AllprodDGV.DataSource = Model.GetAllProducts();
             }
 
         }
@@ -198,10 +198,6 @@ namespace Assigment_4__GUI_
         {
 
         }
-
-        private void clbCatagory_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
+       
 }

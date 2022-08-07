@@ -1,6 +1,6 @@
 ﻿namespace Assigment_4__GUI_
 {
-    partial class Form1
+    partial class Products
     {
         /// <summary>
         /// Required designer variable.
@@ -44,7 +44,7 @@
             this.txtPRICE = new System.Windows.Forms.TextBox();
             this.txtOBJNM = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.Allprod = new System.Windows.Forms.DataGridView();
+            this.AllprodDGV = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.CurrentUser = new System.Windows.Forms.Label();
             this.cbIsAvailable = new System.Windows.Forms.CheckBox();
@@ -54,7 +54,7 @@
             this.gbAvilability = new System.Windows.Forms.GroupBox();
             this.clbCatagory = new System.Windows.Forms.CheckedListBox();
             this.lblProductCatagory = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.Allprod)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AllprodDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.gbProductType.SuspendLayout();
             this.gbAvilability.SuspendLayout();
@@ -62,22 +62,26 @@
             // 
             // bttn_Add
             // 
+            this.bttn_Add.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bttn_Add.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bttn_Add.Location = new System.Drawing.Point(838, 417);
             this.bttn_Add.Name = "bttn_Add";
             this.bttn_Add.Size = new System.Drawing.Size(136, 39);
             this.bttn_Add.TabIndex = 0;
             this.bttn_Add.Text = "Add";
-            this.bttn_Add.UseVisualStyleBackColor = true;
+            this.bttn_Add.UseVisualStyleBackColor = false;
             this.bttn_Add.Click += new System.EventHandler(this.button1_Click);
             // 
             // bttn_Cancel
             // 
+            this.bttn_Cancel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bttn_Cancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bttn_Cancel.Location = new System.Drawing.Point(1006, 417);
             this.bttn_Cancel.Name = "bttn_Cancel";
             this.bttn_Cancel.Size = new System.Drawing.Size(126, 39);
             this.bttn_Cancel.TabIndex = 1;
             this.bttn_Cancel.Text = "Cancel";
-            this.bttn_Cancel.UseVisualStyleBackColor = true;
+            this.bttn_Cancel.UseVisualStyleBackColor = false;
             this.bttn_Cancel.Click += new System.EventHandler(this.button2_Click);
             // 
             // lbl_Count
@@ -92,8 +96,8 @@
             // lbl_name
             // 
             this.lbl_name.AutoSize = true;
-            this.lbl_name.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.lbl_name.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_name.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_name.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lbl_name.Location = new System.Drawing.Point(71, 63);
             this.lbl_name.Name = "lbl_name";
             this.lbl_name.Size = new System.Drawing.Size(55, 16);
@@ -103,6 +107,8 @@
             // lbl_Date
             // 
             this.lbl_Date.AutoSize = true;
+            this.lbl_Date.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_Date.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lbl_Date.Location = new System.Drawing.Point(434, 63);
             this.lbl_Date.Name = "lbl_Date";
             this.lbl_Date.Size = new System.Drawing.Size(39, 16);
@@ -192,18 +198,22 @@
             this.dateTimePicker1.TabIndex = 14;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // Allprod
+            // AllprodDGV
             // 
-            this.Allprod.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Allprod.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Allprod.GridColor = System.Drawing.SystemColors.Control;
-            this.Allprod.Location = new System.Drawing.Point(74, 257);
-            this.Allprod.Name = "Allprod";
-            this.Allprod.RowHeadersWidth = 51;
-            this.Allprod.RowTemplate.Height = 24;
-            this.Allprod.Size = new System.Drawing.Size(742, 199);
-            this.Allprod.TabIndex = 15;
-            this.Allprod.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Allprod_CellContentClick);
+            this.AllprodDGV.AllowUserToDeleteRows = false;
+            this.AllprodDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.AllprodDGV.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.AllprodDGV.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.AllprodDGV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.AllprodDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AllprodDGV.GridColor = System.Drawing.SystemColors.Control;
+            this.AllprodDGV.Location = new System.Drawing.Point(74, 257);
+            this.AllprodDGV.Name = "AllprodDGV";
+            this.AllprodDGV.RowHeadersWidth = 51;
+            this.AllprodDGV.RowTemplate.Height = 24;
+            this.AllprodDGV.Size = new System.Drawing.Size(742, 199);
+            this.AllprodDGV.TabIndex = 15;
+            this.AllprodDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Allprod_CellContentClick);
             // 
             // errorProvider1
             // 
@@ -212,11 +222,11 @@
             // CurrentUser
             // 
             this.CurrentUser.AutoSize = true;
-            this.CurrentUser.Location = new System.Drawing.Point(74, 13);
+            this.CurrentUser.Location = new System.Drawing.Point(71, 23);
             this.CurrentUser.Name = "CurrentUser";
-            this.CurrentUser.Size = new System.Drawing.Size(78, 16);
+            this.CurrentUser.Size = new System.Drawing.Size(84, 16);
             this.CurrentUser.TabIndex = 16;
-            this.CurrentUser.Text = "CurrentUser";
+            this.CurrentUser.Text = "Current User:";
             // 
             // cbIsAvailable
             // 
@@ -276,15 +286,19 @@
             // 
             // clbCatagory
             // 
-            this.clbCatagory.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.clbCatagory.BackColor = System.Drawing.SystemColors.ControlText;
+            this.clbCatagory.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.clbCatagory.FormattingEnabled = true;
             this.clbCatagory.Items.AddRange(new object[] {
-            "Food"});
+            "Food",
+            "Electronics",
+            "Toys",
+            "Guns",
+            "Swords"});
             this.clbCatagory.Location = new System.Drawing.Point(1176, 180);
             this.clbCatagory.Name = "clbCatagory";
-            this.clbCatagory.Size = new System.Drawing.Size(138, 38);
+            this.clbCatagory.Size = new System.Drawing.Size(138, 72);
             this.clbCatagory.TabIndex = 23;
-            this.clbCatagory.SelectedIndexChanged += new System.EventHandler(this.clbCatagory_SelectedIndexChanged);
             // 
             // lblProductCatagory
             // 
@@ -295,18 +309,18 @@
             this.lblProductCatagory.TabIndex = 24;
             this.lblProductCatagory.Text = "Product Catagory";
             // 
-            // Form1
+            // Products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.BackColor = System.Drawing.SystemColors.ControlText;
             this.ClientSize = new System.Drawing.Size(1343, 530);
             this.Controls.Add(this.lblProductCatagory);
             this.Controls.Add(this.clbCatagory);
             this.Controls.Add(this.gbAvilability);
             this.Controls.Add(this.gbProductType);
             this.Controls.Add(this.CurrentUser);
-            this.Controls.Add(this.Allprod);
+            this.Controls.Add(this.AllprodDGV);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txtOBJNM);
             this.Controls.Add(this.txtPRICE);
@@ -322,9 +336,11 @@
             this.Controls.Add(this.lbl_Count);
             this.Controls.Add(this.bttn_Cancel);
             this.Controls.Add(this.bttn_Add);
-            this.Name = "Form1";
+            this.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.Name = "Products";
+            this.Text = "Product";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Allprod)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AllprodDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.gbProductType.ResumeLayout(false);
             this.gbProductType.PerformLayout();
@@ -352,7 +368,7 @@
         private System.Windows.Forms.TextBox txtPRICE;
         private System.Windows.Forms.TextBox txtOBJNM;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DataGridView Allprod;
+        private System.Windows.Forms.DataGridView AllprodDGV;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label CurrentUser;
         private System.Windows.Forms.CheckBox cbIsAvailable;

@@ -29,9 +29,9 @@ namespace Assigment_4__GUI_
             if ((this.textBox1Email.Text == "Admin") && (this.textBoxpass.Text == "Admin"))
             {
                 this.Hide();
-                Form1 form = new Form1();
+                Main form = new Main(textBox1Email.Text);
                 MessageBox.Show("you are granted access");
-                form.ShowDialog();
+                form.Show();
 
 
             }
@@ -41,5 +41,7 @@ namespace Assigment_4__GUI_
                     " input correct pass");
             }
         }
+
+        
     }
 }

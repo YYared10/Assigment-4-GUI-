@@ -14,6 +14,8 @@ namespace Assigment_4__GUI_
         public string Price { get; set; }
         public bool isAvailable { get; set; }
         public string ProductType { get; set; }
+        public List<int> catagory { get; set; } = new List<int>();
+
 
 
         public void save()
@@ -25,7 +27,11 @@ namespace Assigment_4__GUI_
         {
             return modelList;
         }
-
+        public static Model findOne(string name)
+        {
+            //ToLower() is used to make case insensative search. 
+            return modelList.Find(it => it.Objectname.ToLower() == name.ToLower());
+        }
 
 
     }
