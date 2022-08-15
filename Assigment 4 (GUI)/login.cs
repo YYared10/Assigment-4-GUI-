@@ -29,7 +29,7 @@ namespace Assigment_4__GUI_
             if ((this.textBox1Email.Text == "Admin") && (this.textBoxpass.Text == "Admin"))
             {
                 this.Hide();
-                Main form = new Main(textBox1Email.Text);
+                Directory form = new Directory();
                 MessageBox.Show("you are granted access");
                 form.Show();
 
