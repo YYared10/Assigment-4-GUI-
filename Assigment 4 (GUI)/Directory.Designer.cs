@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bttn_productlist = new System.Windows.Forms.Button();
             this.Indicator_panl = new System.Windows.Forms.Panel();
             this.Exit_bttn = new System.Windows.Forms.Button();
             this.Delete_bttn = new System.Windows.Forms.Button();
@@ -36,7 +37,6 @@
             this.Add_bttn = new System.Windows.Forms.Button();
             this.PNL_m = new System.Windows.Forms.Panel();
             this.flwLytPnl_productlist = new System.Windows.Forms.FlowLayoutPanel();
-            this.bttn_productlist = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.PNL_m.SuspendLayout();
             this.SuspendLayout();
@@ -53,8 +53,18 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(270, 450);
+            this.panel1.Size = new System.Drawing.Size(270, 510);
             this.panel1.TabIndex = 0;
+            // 
+            // bttn_productlist
+            // 
+            this.bttn_productlist.Location = new System.Drawing.Point(109, 271);
+            this.bttn_productlist.Name = "bttn_productlist";
+            this.bttn_productlist.Size = new System.Drawing.Size(71, 44);
+            this.bttn_productlist.TabIndex = 5;
+            this.bttn_productlist.Text = "Product List";
+            this.bttn_productlist.UseVisualStyleBackColor = true;
+            this.bttn_productlist.Click += new System.EventHandler(this.bttn_productlist_Click);
             // 
             // Indicator_panl
             // 
@@ -111,34 +121,23 @@
             this.PNL_m.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PNL_m.Location = new System.Drawing.Point(270, 0);
             this.PNL_m.Name = "PNL_m";
-            this.PNL_m.Size = new System.Drawing.Size(805, 450);
+            this.PNL_m.Size = new System.Drawing.Size(998, 510);
             this.PNL_m.TabIndex = 1;
             // 
             // flwLytPnl_productlist
             // 
             this.flwLytPnl_productlist.AutoScroll = true;
-            this.flwLytPnl_productlist.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flwLytPnl_productlist.Location = new System.Drawing.Point(0, 0);
+            this.flwLytPnl_productlist.Location = new System.Drawing.Point(125, 64);
             this.flwLytPnl_productlist.Name = "flwLytPnl_productlist";
-            this.flwLytPnl_productlist.Size = new System.Drawing.Size(805, 450);
+            this.flwLytPnl_productlist.Size = new System.Drawing.Size(739, 395);
             this.flwLytPnl_productlist.TabIndex = 1;
             this.flwLytPnl_productlist.Paint += new System.Windows.Forms.PaintEventHandler(this.flwLytPnl_productlist_Paint);
-            // 
-            // bttn_productlist
-            // 
-            this.bttn_productlist.Location = new System.Drawing.Point(109, 271);
-            this.bttn_productlist.Name = "bttn_productlist";
-            this.bttn_productlist.Size = new System.Drawing.Size(71, 44);
-            this.bttn_productlist.TabIndex = 5;
-            this.bttn_productlist.Text = "Product List";
-            this.bttn_productlist.UseVisualStyleBackColor = true;
-            this.bttn_productlist.Click += new System.EventHandler(this.bttn_productlist_Click);
             // 
             // Directory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1075, 450);
+            this.ClientSize = new System.Drawing.Size(1268, 510);
             this.Controls.Add(this.PNL_m);
             this.Controls.Add(this.panel1);
             this.Name = "Directory";

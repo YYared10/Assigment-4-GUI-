@@ -21,6 +21,16 @@ namespace Assigment_4__GUI_
         {
             PNL_m.BackColor = Color.Aquamarine;
             Indicator_panl.Location = new Point(Indicator_panl.Location.X, 52);
+            
+            if (this.flwLytPnl_productlist.Controls.Count > 0)
+                this.flwLytPnl_productlist.Controls.RemoveAt(0);
+
+            PNL_m.BackColor = Color.Coral;
+            Products product = new Products();
+            product.TopLevel = false;
+            this.flwLytPnl_productlist.Controls.Add(product);
+            this.flwLytPnl_productlist.Tag = product;
+            product.Show();
         }
 
         private void Update_bttn_Click(object sender, EventArgs e)
@@ -42,7 +52,8 @@ namespace Assigment_4__GUI_
 
         private void Directory_Load(object sender, EventArgs e)
         {
-           
+            if (this.flwLytPnl_productlist.Controls.Count > 0)
+                this.flwLytPnl_productlist.Controls.RemoveAt(0);
 
             foreach (var item in Model.GetAllProducts())
             {
@@ -67,12 +78,9 @@ namespace Assigment_4__GUI_
                 this.flwLytPnl_productlist.Controls.RemoveAt(0);
 
             PNL_m.BackColor = Color.CadetBlue;
+            Indicator_panl.Location = new Point(Indicator_panl.Location.X, 271);
 
 
-            foreach (Control item in flwLytPnl_productlist.Controls.OfType<Poduct_Card>().ToList())
-            {
-                flwLytPnl_productlist.Controls.Remove(item);
-            }
             foreach (var item in Model.GetAllProducts())
             {
                 Poduct_Card card = new Poduct_Card();
@@ -82,6 +90,11 @@ namespace Assigment_4__GUI_
                 flwLytPnl_productlist.Controls.Add(card);
                 card.Show();
             }
+        }
+
+        private void Card_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }
