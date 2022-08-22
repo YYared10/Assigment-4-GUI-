@@ -58,6 +58,12 @@
     <Compile Include="Poduct_Card.Designer.cs">
       <DependentUpon>Poduct_Card.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductDescription.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProductDescription.Designer.cs">
+      <DependentUpon>ProductDescription.cs</DependentUpon>
+    </Compile>
     <Compile Include="Products.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Poduct_Card.resx">
       <DependentUpon>Poduct_Card.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductDescription.resx">
+      <DependentUpon>ProductDescription.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Products.resx">
       <DependentUpon>Products.cs</DependentUpon>

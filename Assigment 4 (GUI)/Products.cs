@@ -16,79 +16,62 @@ namespace Assigment_4__GUI_
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Model it = new Model();
             Regex A = new Regex(@"^[a-z]||[A-Z] {10}$");
-            Regex B = new Regex(@"[0-9]{5}$");
+            Regex B = new Regex(@"^[0-9]{5}$");
             bool allFieldsAreCorrect = true;
+            errorProvider1.Clear();
 
 
 
 
-            Model it = new Model
-            {
-                Number = txtNUM.Text,
-                Inventorynum = txtINVENTORYNUM.Text,
-                Objectname = txtOBJNM.Text,
-                Count = txtCOUNT.Text,
-                Price = txtPRICE.Text,
-                Date = dateTimePicker1.Value,
-                isAvailable = cbIsAvailable.Checked,
+            it.Date = dateTimePicker1.Value;
 
-            };
 
-            if (string.IsNullOrEmpty(txtNUM.Text))
+
+            if (B.IsMatch(txtNUM.Text))
             {
 
-                errorProvider1.SetError(txtNUM, "INVALID number- !  ");
-            }
-            else if (B.IsMatch(txtNUM.Text))
-            {
-                errorProvider1.SetError(txtNUM, "INVALID number- !  ");
+               it.Number = int.Parse(txtNUM.Text);
             }
             else
             {
-                errorProvider1.Clear();
+                allFieldsAreCorrect = false;
+                errorProvider1.SetError(txtNUM, "The filed should be 5 digite whole number.");
             }
 
-            if (string.IsNullOrEmpty(txtCOUNT.Text))
+            if (B.IsMatch(txtCOUNT.Text))
             {
+                it.Count = int.Parse(txtCOUNT.Text);
 
-                errorProvider1.SetError(txtCOUNT, "INVALID Count !  ");
-            }
-            else if (B.IsMatch(txtCOUNT.Text))
-            {
-                errorProvider1.SetError(txtCOUNT, "INVALID Count !  ");
             }
             else
             {
-                errorProvider1.Clear();
+                allFieldsAreCorrect = false;
+                errorProvider1.SetError(txtCOUNT, "The filed should be 5 digite whole number.");
             }
 
-            if (string.IsNullOrEmpty(txtOBJNM.Text))
-            {
 
-                errorProvider1.SetError(txtOBJNM, "INVALID ObjectName  !  ");
-            }
-            else if (A.IsMatch(txtOBJNM.Text))
+            if (A.IsMatch(txtOBJNM.Text))
             {
-                errorProvider1.SetError(txtOBJNM, "INVALID ObjectName !  ");
+                it.Objectname = txtOBJNM.Text;
             }
             else
             {
-                errorProvider1.Clear();
+                allFieldsAreCorrect = false;
+                errorProvider1.SetError(txtOBJNM, "The field should contain number.");
             }
 
-            if (string.IsNullOrEmpty(txtINVENTORYNUM.Text))
-            {
 
-                errorProvider1.SetError(txtINVENTORYNUM, "INVALID InvetoryNUM  !  ");
-            }
-            else if (B.IsMatch(txtINVENTORYNUM.Text))
+            if (B.IsMatch(txtINVENTORYNUM.Text))
             {
-                errorProvider1.SetError(txtINVENTORYNUM, "INVALID InvetoryNUM !  ");
+                it.Inventorynum = int.Parse(txtINVENTORYNUM.Text);
+
             }
             else
             {
-                errorProvider1.Clear();
+                allFieldsAreCorrect = false;
+                errorProvider1.SetError(txtINVENTORYNUM, "The field should be 6 digite whole number.");
             }
 
             try
@@ -96,7 +79,12 @@ namespace Assigment_4__GUI_
                 if (string.IsNullOrEmpty(txtPRICE.Text))
                 {
 
-                    errorProvider1.SetError(txtPRICE, "INVALID Price  ! ");
+                    errorProvider1.SetError(txtPRICE, "The field should contain number(it can be decimal number).");
+                }
+                else if (B.IsMatch(txtPRICE.Text))
+                {
+                    it.Price = double.Parse(txtPRICE.Text);
+
                 }
                 else
                 {
@@ -139,40 +127,14 @@ namespace Assigment_4__GUI_
         }
 
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCOUNT_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void txtPRICE_TextChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void txtNUM_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtINVENTORYNUM_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtOBJNM_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {

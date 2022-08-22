@@ -31,6 +31,7 @@ namespace Assigment_4__GUI_
             this.flwLytPnl_productlist.Controls.Add(product);
             this.flwLytPnl_productlist.Tag = product;
             product.Show();
+
         }
 
         private void Update_bttn_Click(object sender, EventArgs e)
@@ -89,6 +90,23 @@ namespace Assigment_4__GUI_
                 card.ProductPrice = item.Price;
                 flwLytPnl_productlist.Controls.Add(card);
                 card.Show();
+
+                card.DoubleClick += (object sender1, EventArgs ee) =>
+                {
+                    this.flwLytPnl_productlist.Controls.Clear();
+
+                    ProductDescription description = new ProductDescription();
+                    description.productName = item.Objectname;
+                    description.ProductNumber = item.Number;
+                    description.ProductInvNum = item.Inventorynum;
+                    description.ProductDate = item.Date;
+                    description.ProductType = item.ProductType;
+                    description.ProductQuantity = item.Count;
+                    description.ProductPrice = item.Price;
+                    description.Show();
+                    flwLytPnl_productlist.Controls.Add(description);
+
+                };
             }
         }
 

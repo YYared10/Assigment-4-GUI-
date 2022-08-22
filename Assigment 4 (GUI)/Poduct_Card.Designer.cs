@@ -72,6 +72,7 @@
             this.Controls.Add(this.NM_label1);
             this.Name = "Poduct_Card";
             this.Size = new System.Drawing.Size(437, 274);
+            this.DoubleClick += new System.EventHandler(this.Poduct_Card_DoubleClick);
             this.ResumeLayout(false);
             this.PerformLayout();
 

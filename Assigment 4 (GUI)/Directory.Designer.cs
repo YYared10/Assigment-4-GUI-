@@ -53,7 +53,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(270, 510);
+            this.panel1.Size = new System.Drawing.Size(270, 653);
             this.panel1.TabIndex = 0;
             // 
             // bttn_productlist
@@ -121,7 +121,7 @@
             this.PNL_m.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PNL_m.Location = new System.Drawing.Point(270, 0);
             this.PNL_m.Name = "PNL_m";
-            this.PNL_m.Size = new System.Drawing.Size(998, 510);
+            this.PNL_m.Size = new System.Drawing.Size(1512, 653);
             this.PNL_m.TabIndex = 1;
             // 
             // flwLytPnl_productlist
@@ -129,7 +129,7 @@
             this.flwLytPnl_productlist.AutoScroll = true;
             this.flwLytPnl_productlist.Location = new System.Drawing.Point(125, 64);
             this.flwLytPnl_productlist.Name = "flwLytPnl_productlist";
-            this.flwLytPnl_productlist.Size = new System.Drawing.Size(739, 395);
+            this.flwLytPnl_productlist.Size = new System.Drawing.Size(1351, 577);
             this.flwLytPnl_productlist.TabIndex = 1;
             this.flwLytPnl_productlist.Paint += new System.Windows.Forms.PaintEventHandler(this.flwLytPnl_productlist_Paint);
             // 
@@ -137,7 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1268, 510);
+            this.ClientSize = new System.Drawing.Size(1782, 653);
             this.Controls.Add(this.PNL_m);
             this.Controls.Add(this.panel1);
             this.Name = "Directory";

@@ -26,23 +26,25 @@ namespace Assigment_4__GUI_
             set { _Productname = value; NM_label1.Text = value; }
         }
 
-        private string _ProductDescription;
+        private int _ProductDescription;
 
-        public string ProductDescription
+        public int ProductDescription
         {
             get { return _ProductDescription; }
             set { _ProductDescription = value; Description_lbl.Text += value; }
         }
 
-        private string _ProductPrice;
+        private double _ProductPrice;
 
-        public string ProductPrice
+        public double ProductPrice
         {
             get { return _ProductPrice; }
             set { _ProductPrice = value; Price_lbl.Text += value; }
         }
 
+        private void Poduct_Card_DoubleClick(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

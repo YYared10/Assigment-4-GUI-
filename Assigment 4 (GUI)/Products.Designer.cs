@@ -132,7 +132,6 @@
             this.lbl_Price.Size = new System.Drawing.Size(41, 16);
             this.lbl_Price.TabIndex = 6;
             this.lbl_Price.Text = "Price ";
-            this.lbl_Price.Click += new System.EventHandler(this.label5_Click);
             // 
             // lbl_Object_Name
             // 
@@ -156,7 +155,6 @@
             this.txtINVENTORYNUM.Name = "txtINVENTORYNUM";
             this.txtINVENTORYNUM.Size = new System.Drawing.Size(320, 22);
             this.txtINVENTORYNUM.TabIndex = 9;
-            this.txtINVENTORYNUM.TextChanged += new System.EventHandler(this.txtINVENTORYNUM_TextChanged);
             // 
             // txtNUM
             // 
@@ -164,7 +162,6 @@
             this.txtNUM.Name = "txtNUM";
             this.txtNUM.Size = new System.Drawing.Size(244, 22);
             this.txtNUM.TabIndex = 10;
-            this.txtNUM.TextChanged += new System.EventHandler(this.txtNUM_TextChanged);
             // 
             // txtCOUNT
             // 
@@ -172,7 +169,6 @@
             this.txtCOUNT.Name = "txtCOUNT";
             this.txtCOUNT.Size = new System.Drawing.Size(278, 22);
             this.txtCOUNT.TabIndex = 11;
-            this.txtCOUNT.TextChanged += new System.EventHandler(this.txtCOUNT_TextChanged);
             // 
             // txtPRICE
             // 
@@ -180,7 +176,6 @@
             this.txtPRICE.Name = "txtPRICE";
             this.txtPRICE.Size = new System.Drawing.Size(320, 22);
             this.txtPRICE.TabIndex = 12;
-            this.txtPRICE.TextChanged += new System.EventHandler(this.txtPRICE_TextChanged);
             // 
             // txtOBJNM
             // 
@@ -188,7 +183,6 @@
             this.txtOBJNM.Name = "txtOBJNM";
             this.txtOBJNM.Size = new System.Drawing.Size(327, 22);
             this.txtOBJNM.TabIndex = 13;
-            this.txtOBJNM.TextChanged += new System.EventHandler(this.txtOBJNM_TextChanged);
             // 
             // dateTimePicker1
             // 
