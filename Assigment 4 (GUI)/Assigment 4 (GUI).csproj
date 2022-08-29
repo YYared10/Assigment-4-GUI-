@@ -46,6 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connection check .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connection check .Designer.cs">
+      <DependentUpon>Connection check .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database_Services.cs" />
     <Compile Include="Directory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +98,9 @@
     <Compile Include="Search.Designer.cs">
       <DependentUpon>Search.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Connection check .resx">
+      <DependentUpon>Connection check .cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Directory.resx">
       <DependentUpon>Directory.cs</DependentUpon>
     </EmbeddedResource>

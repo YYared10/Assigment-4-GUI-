@@ -37,6 +37,7 @@
             this.Add_bttn = new System.Windows.Forms.Button();
             this.PNL_m = new System.Windows.Forms.Panel();
             this.flwLytPnl_productlist = new System.Windows.Forms.FlowLayoutPanel();
+            this.bttn_connectioncheck = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.PNL_m.SuspendLayout();
             this.SuspendLayout();
@@ -44,6 +45,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DimGray;
+            this.panel1.Controls.Add(this.bttn_connectioncheck);
             this.panel1.Controls.Add(this.bttn_productlist);
             this.panel1.Controls.Add(this.Indicator_panl);
             this.panel1.Controls.Add(this.Exit_bttn);
@@ -133,6 +135,16 @@
             this.flwLytPnl_productlist.TabIndex = 1;
             this.flwLytPnl_productlist.Paint += new System.Windows.Forms.PaintEventHandler(this.flwLytPnl_productlist_Paint);
             // 
+            // bttn_connectioncheck
+            // 
+            this.bttn_connectioncheck.Location = new System.Drawing.Point(20, 466);
+            this.bttn_connectioncheck.Name = "bttn_connectioncheck";
+            this.bttn_connectioncheck.Size = new System.Drawing.Size(244, 73);
+            this.bttn_connectioncheck.TabIndex = 6;
+            this.bttn_connectioncheck.Text = "Connection Check";
+            this.bttn_connectioncheck.UseVisualStyleBackColor = true;
+            this.bttn_connectioncheck.Click += new System.EventHandler(this.bttn_connectioncheck_Click);
+            // 
             // Directory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -160,5 +172,6 @@
         private System.Windows.Forms.Panel PNL_m;
         private System.Windows.Forms.FlowLayoutPanel flwLytPnl_productlist;
         private System.Windows.Forms.Button bttn_productlist;
+        private System.Windows.Forms.Button bttn_connectioncheck;
     }
 }

@@ -75,8 +75,7 @@ namespace Assigment_4__GUI_
         private void bttn_productlist_Click(object sender, EventArgs e)
         {
 
-            if (this.flwLytPnl_productlist.Controls.Count > 0)
-                this.flwLytPnl_productlist.Controls.RemoveAt(0);
+           
 
             PNL_m.BackColor = Color.CadetBlue;
             Indicator_panl.Location = new Point(Indicator_panl.Location.X, 271);
@@ -113,6 +112,12 @@ namespace Assigment_4__GUI_
         private void Card_Click(object sender, EventArgs e)
         {
             throw new NotImplementedException();
+        }
+
+        private void bttn_connectioncheck_Click(object sender, EventArgs e)
+        {
+            Connection_check Check = new Connection_check();
+            Check.Show();
         }
     }
 }
