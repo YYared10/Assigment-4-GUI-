@@ -1,6 +1,6 @@
 ﻿namespace Assigment_4__GUI_
 {
-    partial class Products
+    partial class Add_Products
     {
         /// <summary>
         /// Required designer variable.

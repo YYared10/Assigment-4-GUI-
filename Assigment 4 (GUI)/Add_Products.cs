@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace Assigment_4__GUI_
 {
-    public partial class Products : Form
+    public partial class Add_Products : Form
     {
-        public Products()
+        public Add_Products()
         {
             InitializeComponent();
             CurrentUser.Text += Name;

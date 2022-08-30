@@ -31,7 +31,7 @@ namespace Assigment_4__GUI_
                 ActiveMdiChild.Close();
                 
             }
-                Products form = new Products();
+                Add_Products form = new Add_Products();
                 form.MdiParent = this;
                 form.Show();
 

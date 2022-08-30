@@ -19,9 +19,9 @@ namespace Assigment_4__GUI_
          
         private void Searchbttn1_Click(object sender, EventArgs e)
         {
-            /*
+            
             List<Model> it = new List<Model>();
-            Model product = Model.findOne(OBJNAMEtextBox1.Text);
+            Model product = Model.Find(OBJNAMEtextBox1.Text);
             if (product == null)
             {
                 MessageBox.Show("Product not found.", "No Result");
@@ -32,7 +32,7 @@ namespace Assigment_4__GUI_
                 SearchdataGridView1.DataSource = null;
                 SearchdataGridView1.DataSource = it;
             }
-            */
+            
         }
     }
 }
